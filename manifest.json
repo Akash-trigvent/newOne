@@ -1,0 +1,18 @@
+{
+    "manifest_version":3,
+    "name":"2nd facebook extension",
+    "version":"1.0.2",
+    "action":{
+        "default_title":"second",
+        "default_icon":"fb_logo.png",
+        "default_popup":"popup.html"
+    },
+    "content_scripts":[
+        {
+        "matches":["https://*.facebook.com/*"],
+        "js":["content_script.js"],
+        "run_at": "document_end"
+        }
+    ],
+    "permissions":["tabs", "storage"]
+}
